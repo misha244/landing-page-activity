@@ -47,6 +47,9 @@ html {
 }
 
 .navbar {
+  background-color: palevioletred;
+  font-size: 3rem;
+  padding: 5px;
 }
 
 @keyframes moveFromTopWithBounce {
