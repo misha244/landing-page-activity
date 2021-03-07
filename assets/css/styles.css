@@ -3,7 +3,11 @@ html {
 }
 
 .hero {
-  background-image: linear-gradient(white, black),
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 0, 0.5),
+      rgba(0, 0, 255, 0.5)
+    ),
     url("/classroom/landing-page-activity/assets/images/voscb.jpg");
   background-size: cover;
   background-position: center;
@@ -18,24 +22,73 @@ html {
   left: 1.8rem;
 }
 .logo-image {
-  width: 6rem;
+  width: 9rem;
 }
 .logo--animated {
   animation: moveFromTopWithBounce 1s ease-out;
 }
 
 .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border: 1px solid fuchsia;
+}
+
+.container > h1 {
+  font-size: 6rem;
+  animation: moveInFromLeftAndResize 1s ease-out;
+}
+.container > h2 {
+  font-size: 4rem;
+  animation: fadeIn 1s ease-out;
 }
 
 .navbar {
 }
 
-@keyframes;
-moveFromTopWithBounce {
+@keyframes moveFromTopWithBounce {
   0% {
     transform: translateY(-20rem);
   }
 
+  50% {
+    transform: translateY(3rem);
+  }
+
   100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInFromLeftAndResize {
+  0% {
+    font-size: 8rem;
+    transform: translateX(-50%);
+  }
+
+  50% {
+    font-size: 7rem;
+    transform: translateX(-20%);
+  }
+
+  100% {
+    font-size: 6rem;
+    transform: translateX();
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
